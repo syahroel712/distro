@@ -53,3 +53,20 @@ Route::delete('/ukuran/{ukuran}', 'UkuranController@destroy');
 Route::get('/ukuran/{ukuran}/edit', 'UkuranController@edit');
 //utk proses edit data
 Route::patch('/ukuran/{ukuran}', 'UkuranController@update');
+
+
+// CRUD Warna
+//membuat route untuk halaman mahasiswa dengan controller
+Route::get('/warna', 'WarnaController@index');
+//menampilkan form tambah data
+Route::get('/warna/create', 'WarnaController@create');
+//membuat route untuk memproses tambah data
+Route::post('/warna', 'WarnaController@store');
+//menampilkan data berdasarkan id
+//Route::get('/warna/{Warna}', 'WarnaController@show');
+//untuk menghapus data
+Route::delete('/warna/{warna}', 'WarnaController@destroy');
+//utk edit data
+Route::get('/warna/{warna}/edit', 'WarnaController@edit');
+//utk proses edit data
+Route::patch('/warna/{warna}', 'WarnaController@update');
