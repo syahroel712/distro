@@ -365,7 +365,11 @@
                                             <span class="sub-item">Ukuran</span>
                                         </a>
                                     </li>
-
+                                    <li>
+                                        <a href="{{url('/warna')}}">
+                                            <span class="sub-item">Warna</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>

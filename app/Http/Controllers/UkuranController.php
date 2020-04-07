@@ -15,7 +15,7 @@ class UkuranController extends Controller
      */
     public function index()
     {
-        $ukuran = Ukuran::orderBy('ukuran_harga')->get();
+        $ukuran = Ukuran::orderBy('ukuran_harga', 'asc')->get();
         return view('ukuran/index', compact('ukuran'));
     }
 
