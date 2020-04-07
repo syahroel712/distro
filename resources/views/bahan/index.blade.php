@@ -9,7 +9,7 @@
 <div class="content">
     <div class="page-inner">
         <div class="page-header">
-            <h4 class="page-title">Ukuran</h4>
+            <h4 class="page-title">Bahan</h4>
             <ul class="breadcrumbs">
                 <li class="nav-home">
                     <a href="#">
@@ -20,7 +20,7 @@
                     <i class="flaticon-right-arrow"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Data Ukuran</a>
+                    <a href="#">Data Bahan</a>
                 </li>
                 <!-- <li class="separator">
                         <i class="flaticon-right-arrow"></i>
@@ -35,10 +35,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex align-items-center">
-                            <h4 class="card-title">Data Ukuran</h4>
-                            <a class="btn btn-primary btn-round ml-auto" style="color: white" href="{{ '/ukuran/create' }}">
+                            <h4 class="card-title">Data Bahan</h4>
+                            <a class="btn btn-primary btn-round ml-auto" style="color: white" href="{{ '/bahan/create' }}">
                                 <i class="fa fa-plus"></i>
-                                Data Ukuran
+                                Data Bahan
                             </a>
                         </div>
                     </div>
@@ -55,23 +55,23 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Ukuran</th>
+                                                <th>Nama Bahan</th>
                                                 <th>Harga</th>
                                                 <th style="width: 10%">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($ukuran as $data)
+                                            @foreach($bahan as $data)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $data->ukuran_nama }}</td>
-                                                <td>Rp. {{ number_format($data->ukuran_harga, 2) }}</td>
+                                                <td>{{ $data->bahan_nama }}</td>
+                                                <td>Rp. {{ number_format($data->bahan_harga, 2) }}</td>
                                                 <td>
                                                     <div class="form-button-action">
-                                                        <a href="/ukuran/{{ $data->ukuran_id }}/edit" class="btn btn-link btn-primary" data-toggle="tooltip" data-original-title="Edit Data">
+                                                        <a href="/bahan/{{ $data->bahan_id }}/edit" class="btn btn-link btn-primary" data-toggle="tooltip" data-original-title="Edit Data">
                                                             <i class="fa fa-edit"></i>
                                                         </a>
-                                                        <form action="{{url('/ukuran/'.$data->ukuran_id) }}" method="POST" class="d-inline" style="margin-top: 0.5px ">
+                                                        <form action="{{url('/bahan/'.$data->bahan_id) }}" method="POST" class="d-inline" style="margin-top: 0.5px ">
                                                             <!-- metod bawaan laravel utk hapus data dengan nama delete -->
                                                             @method('delete')
                                                             <!-- method bawaan laravel yang berisi token random utk mencegah user nakal -->
