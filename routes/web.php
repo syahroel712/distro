@@ -35,3 +35,21 @@ Route::delete('/kategori/{kategori}', 'KategoriController@destroy');
 Route::get('/kategori/{kategori}/edit', 'KategoriController@edit');
 //utk proses edit data
 Route::patch('/kategori/{kategori}', 'KategoriController@update');
+
+
+
+// CRUD Ukuran
+//membuat route untuk halaman mahasiswa dengan controller
+Route::get('/ukuran', 'UkuranController@index');
+//menampilkan form tambah data
+Route::get('/ukuran/create', 'UkuranController@create');
+//membuat route untuk memproses tambah data
+Route::post('/ukuran', 'UkuranController@store');
+//menampilkan data berdasarkan id
+//Route::get('/ukuran/{ukuran}', 'UkuranController@show');
+//untuk menghapus data
+Route::delete('/ukuran/{ukuran}', 'UkuranController@destroy');
+//utk edit data
+Route::get('/ukuran/{ukuran}/edit', 'UkuranController@edit');
+//utk proses edit data
+Route::patch('/ukuran/{ukuran}', 'UkuranController@update');

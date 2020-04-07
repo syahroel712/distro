@@ -40,7 +40,7 @@ class KategoriController extends Controller
             'kategori_nama' => 'required'
         ]);
 
-        // dd($request);
+        //dd($request);
 
         //cara ketiga jika sudah panggil $fillable dimodel
         Kategori::create($request->all());

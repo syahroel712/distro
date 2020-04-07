@@ -30,6 +30,7 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="{{url('assets/css/demo.css')}}">
+    <script src="{{url('assets/js/AutoNumeric.js')}}"></script>
 </head>
 
 <body>
@@ -357,6 +358,11 @@
                                     <li>
                                         <a href="{{url('/kategori')}}">
                                             <span class="sub-item">Kategori</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('/ukuran')}}">
+                                            <span class="sub-item">Ukuran</span>
                                         </a>
                                     </li>
 
