@@ -370,6 +370,16 @@
                                             <span class="sub-item">Warna</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="{{url('/bahan')}}">
+                                            <span class="sub-item">Bahan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('/barang')}}">
+                                            <span class="sub-item">Barang</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -546,9 +556,19 @@
             </div>
         </div>
         <!-- End Sidebar -->
+        <div class="main-panel">
+            @yield('content')
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="pull-left">
 
-        @yield('content')
-
+                    </nav>
+                    <div class="copyright ml-auto">
+                        2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="#">Swimoc Distro</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
 
     </div>

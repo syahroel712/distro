@@ -6,10 +6,11 @@
 
 <!-- membuat isi content berdasarkan kebutuhan -->
 @section('content')
+
 <div class="content">
     <div class="page-inner">
         <div class="page-header">
-            <h4 class="page-title">Ukuran</h4>
+            <h4 class="page-title">Bahan</h4>
             <ul class="breadcrumbs">
                 <li class="nav-home">
                     <a href="#">
@@ -20,13 +21,13 @@
                     <i class="flaticon-right-arrow"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Data Ukuran</a>
+                    <a href="#">Data Bahan</a>
                 </li>
                 <li class="separator">
                     <i class="flaticon-right-arrow"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Edit Ukuran</a>
+                    <a href="#">Tambah Bahan</a>
                 </li>
             </ul>
         </div>
@@ -35,8 +36,8 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex align-items-center">
-                            <h4 class="card-title">Edit Ukuran</h4>
-                            <a class="btn btn-primary btn-round ml-auto" style="color: white" href="{{ '/ukuran' }}">
+                            <h4 class="card-title">Tambah Bahan</h4>
+                            <a class="btn btn-primary btn-round ml-auto" style="color: white" href="{{ '/bahan' }}">
                                 <i class="flaticon-left-arrow"></i>
                                 Kembali
                             </a>
@@ -45,24 +46,22 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <form method="POST" action="{{url('/ukuran/'.$ukuran->ukuran_id) }}">
-                                    <!-- metod bawaan laravel untuk membajak form method POST -->
-                                    @method('patch')
+                                <form method="POST" action="{{ url('/bahan') }}">
                                     <!-- memanggil token supaya data yang dimasukkan sah dan tidak bisa dipalsukan -->
                                     @csrf
                                     <div class="form-group">
-                                        <label>Nama Ukuran</label>
-                                        <input type="text" name="ukuran_nama" class="form-control @error('ukuran_nama') is-invalid  @enderror" id="ukuran_nama" placeholder="Nama Ukuran" value="{{ $ukuran->ukuran_nama }}">
-                                        @error('ukuran_nama')
+                                        <label>Nama Bahan</label>
+                                        <input type="text" name="bahan_nama" class="form-control @error('bahan_nama') is-invalid  @enderror" id="bahan_nama" placeholder="bahan" value="{{ old('bahan_nama') }}">
+                                        @error('bahan_nama')
                                         <div class="is-invalid">
                                             {{ $message }}
                                         </div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Harga Ukuran</label>
-                                        <input type="text" name="ukuran_harga" class="form-control @error('ukuran_harga') is-invalid  @enderror" id="ukuran_harga" placeholder="harga ukuran" value="{{ $ukuran->ukuran_harga }}">
-                                        @error('ukuran_harga')
+                                        <label>Harga</label>
+                                        <input type="text" name="bahan_harga" class="form-control @error('bahan_harga') is-invalid  @enderror" id="bahan_harga" placeholder="Harga" value="{{ old('bahan_harga') }}">
+                                        @error('bahan_harga')
                                         <div class="is-invalid">
                                             {{ $message }}
                                         </div>
@@ -91,7 +90,7 @@
         decimalCharacter: ',',
         digitGroupSeparator: '.'
     };
-    var ukuran_harga = new AutoNumeric('#ukuran_harga', pengaturan_rupiah);
+    var bahan_harga = new AutoNumeric('#bahan_harga', pengaturan_rupiah);
 </script>
 
 @endsection

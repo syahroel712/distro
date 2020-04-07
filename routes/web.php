@@ -70,3 +70,21 @@ Route::delete('/warna/{warna}', 'WarnaController@destroy');
 Route::get('/warna/{warna}/edit', 'WarnaController@edit');
 //utk proses edit data
 Route::patch('/warna/{warna}', 'WarnaController@update');
+
+
+
+// CRUD Bahan
+//membuat route untuk halaman mahasiswa dengan controller
+Route::get('/bahan', 'BahanController@index');
+//menampilkan form tambah data
+Route::get('/bahan/create', 'BahanController@create');
+//membuat route untuk memproses tambah data
+Route::post('/bahan', 'BahanController@store');
+//menampilkan data berdasarkan id
+//Route::get('/Bahan/{Bahan}', 'BahanController@show');
+//untuk menghapus data
+Route::delete('/bahan/{bahan}', 'BahanController@destroy');
+//utk edit data
+Route::get('/bahan/{bahan}/edit', 'BahanController@edit');
+//utk proses edit data
+Route::patch('/bahan/{bahan}', 'BahanController@update');
