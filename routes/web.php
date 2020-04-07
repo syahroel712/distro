@@ -88,3 +88,21 @@ Route::delete('/bahan/{bahan}', 'BahanController@destroy');
 Route::get('/bahan/{bahan}/edit', 'BahanController@edit');
 //utk proses edit data
 Route::patch('/bahan/{bahan}', 'BahanController@update');
+
+
+
+// CRUD Supplier
+//membuat route untuk halaman mahasiswa dengan controller
+Route::get('/supplier', 'SupplierController@index');
+//menampilkan form tambah data
+Route::get('/supplier/create', 'SupplierController@create');
+//membuat route untuk memproses tambah data
+Route::post('/supplier', 'SupplierController@store');
+//menampilkan data berdasarkan id
+//Route::get('/Supplier/{supplier}', 'SupplierController@show');
+//untuk menghapus data
+Route::delete('/supplier/{supplier}', 'SupplierController@destroy');
+//utk edit data
+Route::get('/supplier/{supplier}/edit', 'SupplierController@edit');
+//utk proses edit data
+Route::patch('/supplier/{supplier}', 'SupplierController@update');
