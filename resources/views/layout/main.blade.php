@@ -356,6 +356,11 @@
                             <div class="collapse" id="base">
                                 <ul class="nav nav-collapse">
                                     <li>
+                                        <a href="{{url('/barang')}}">
+                                            <span class="sub-item">Barang</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="{{url('/kategori')}}">
                                             <span class="sub-item">Kategori</span>
                                         </a>
@@ -376,10 +381,11 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/barang')}}">
-                                            <span class="sub-item">Barang</span>
+                                        <a href="{{url('/supplier')}}">
+                                            <span class="sub-item">Supplier</span>
                                         </a>
                                     </li>
+
                                 </ul>
                             </div>
                         </li>
